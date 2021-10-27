@@ -19,6 +19,7 @@ class CommentBox extends Component {
 	};
 	render () {
 		return (
+			<div>
 			<form onSubmit={this.handleSubmit}>
 				<h4>Add a comment</h4>
 				<textarea
@@ -31,6 +32,8 @@ class CommentBox extends Component {
 					<button>Submit Comment</button>
 				</div>
 			</form>
+				<button className="fetch-comments" onClick={this.props.fetchComments}>Fetch Comments</button>
+			</div>
 		)
 	}
 }

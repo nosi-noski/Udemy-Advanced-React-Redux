@@ -18,9 +18,9 @@ afterEach(() => {
 	wrapped.unmount();
 });
 
-it('it has a text in textarea and button', () => {
+it('it has a text in textarea and two buttons', () => {
 		expect(wrapped.find('textarea').length).toEqual(1);
-		expect(wrapped.find('button').length).toEqual(1);
+		expect(wrapped.find('button').length).toEqual(2);
 	}
 );
 
