@@ -10,6 +10,7 @@ const CommentListComponent = (props) => {
 	}
 	return (
 		<div>
+			<h4>Comment List</h4>
 			<ul>
 				{ renderComments(comments) }
 			</ul>
