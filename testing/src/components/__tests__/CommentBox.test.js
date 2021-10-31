@@ -1,10 +1,10 @@
+import 'jsdom-global/register';
 import React from 'react';
 import { mount } from 'enzyme';
-import CommentBox from 'components/Comment/CommentBox';
+import CommentBox from '../Comment/CommentBox';
 import Root from '../../Root';
 
 let wrapped;
-
 
 beforeEach(() => {
 	wrapped = mount(
@@ -18,9 +18,9 @@ afterEach(() => {
 	wrapped.unmount();
 });
 
-it('it has a text in textarea and button', () => {
+it('it has a text in textarea and two buttons', () => {
 		expect(wrapped.find('textarea').length).toEqual(1);
-		expect(wrapped.find('button').length).toEqual(1);
+		expect(wrapped.find('button').length).toEqual(2);
 	}
 );
 

@@ -3,13 +3,14 @@ import { connect } from "react-redux";
 
 const CommentListComponent = (props) => {
 	const { comments } = props;
-	const renderComments = (comments) => {
-		return comments?.map( comment => {
+	const renderComments = (comments = []) => {
+		return comments.map( comment => {
 			return <li key={comment}>{comment}</li>
 		} );
 	}
 	return (
 		<div>
+			<h4>Comment List</h4>
 			<ul>
 				{ renderComments(comments) }
 			</ul>
